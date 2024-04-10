@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Student Details</h2>
+        <form action="/predict" method="post">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+            <label for="10th_percentage">10th Percentage:</label>
+            <input type="text" id="10th_percentage" name="10th_percentage" placeholder="Enter 10th percentage...">
+            <label for="medium_of_education">Medium of School Education:</label>
+            <select id="medium_of_education" name="medium_of_education">
+                <option value="0">semi English</option>
+                <option value="1">Marathi</option>
+                <option value="2">English 2</option>
+                <option value="3"> Other</option>
+            </select>
+            <label for="hsc_or_diploma">HSC / Diploma:</label>
+            <select id="hsc_or_diploma" name="hsc_or_diploma">
+                <option value="0">HSC</option>
+                <option value="1">Diploma</option>
+            </select>
+            <label for="board_for_12th_exam">Name of Board for 12th Exam:</label>
+            <select id="board_for_12th_exam" name="board_for_12th_exam">
+                <option value="0">State Board</option>
+                <option value="1">CBSE</option>
+            </select>
+            <label for="12th_percentage">12th Percentage:</label>
+            <input type="text" id="12th_percentage" name="12th_percentage" placeholder="Enter 12th percentage...">
+            <label for="semester_1_cgpa">Semester 1 CGPA:</label>
+            <input type="text" id="semester_1_cgpa" name="semester_1_cgpa" placeholder="Enter Semester 1 CGPA...">
+            <label for="semester_2_cgpa">Semester 2 CGPA:</label>
+            <input type="text" id="semester_2_cgpa" name="semester_2_cgpa" placeholder="Enter Semester 2 CGPA...">
+            <label for="semester_3_sgpa">Semester 3 SGPA:</label>
+            <input type="text" id="semester_3_sgpa" name="semester_3_sgpa" placeholder="Enter Semester 3 SGPA...">
+            <label for="semester_4_cgpa">Semester 4 CGPA:</label>
+            <input type="text" id="semester_4_cgpa" name="semester_4_cgpa" placeholder="Enter Semester 4 CGPA...">
+            <label for="semester_5_cgpa">Semester 5 CGPA:</label>
+            <input type="text" id="semester_5_cgpa" name="semester_5_cgpa" placeholder="Enter Semester 5 CGPA...">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

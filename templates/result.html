@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .quote {
+            margin-top: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <!-- <p>The student is <strong>{{ result }}</strong>.</p> -->
+        <div class="quote">
+            {% if result == "Placed" %}
+            <h2>The Student has high chances of Placement</h2>
+                <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
+            {% elif result == "Not Placed" %}
+            <h2>The Student has Less chances of Placement</h2>
+                <p>"Success is stumbling from failure to failure with no loss of enthusiasm." - Winston Churchill</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
